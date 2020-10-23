@@ -27,7 +27,7 @@ public class MainController {
 			
 			//Showing 2nd Scene after Login is Successful
 			Stage primaryStage = new Stage();
-			URL url = Paths.get("F:/Com/loginForm/src/Main.fxml").toUri().toURL();
+			URL url = Paths.get("/home/karan/git/airline_management/loginForm/src/Main.fxml").toUri().toURL();
 			Parent root = FXMLLoader.load(url);
 			Scene scene = new Scene(root,400,400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
