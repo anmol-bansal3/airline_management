@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="application.MainController">
+   <children>
+      <Label fx:id="topBar" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" prefHeight="69.0" prefWidth="1000.0" text="Welcome to Air Ticket Booking!" textAlignment="RIGHT" textFill="#da2d16">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="home" alignment="CENTER" layoutX="47.0" layoutY="75.0" prefHeight="50.0" prefWidth="100.0" text="HOME" textAlignment="CENTER" />
+      <Label fx:id="checkIn" alignment="CENTER" layoutX="176.0" layoutY="75.0" prefHeight="50.0" prefWidth="100.0" text="CHECK IN" />
+      <Label fx:id="flightStatus" layoutX="313.0" layoutY="75.0" prefHeight="50.0" prefWidth="171.0" text="FLIGHT STATUS" />
+      <Label fx:id="modify" layoutX="519.0" layoutY="75.0" prefHeight="50.0" prefWidth="100.0" text="MODIFY" />
+      <Label fx:id="support" layoutX="660.0" layoutY="75.0" prefHeight="50.0" prefWidth="100.0" text="SUPPORT" />
+      <Label fx:id="login" layoutX="799.0" layoutY="75.0" prefHeight="50.0" prefWidth="100.0" text="LOG IN" />
+      <Separator layoutX="-1.0" layoutY="120.0" prefHeight="10.0" prefWidth="1000.0" />
+      <ComboBox fx:id="fromLocation" layoutX="65.0" layoutY="168.0" onAction="#fromLocationChanged" prefHeight="25.0" prefWidth="205.0" promptText="From Location" />
+      <ComboBox fx:id="toLocation" layoutX="313.0" layoutY="168.0" onAction="#toLocationChanged" prefHeight="25.0" prefWidth="205.0" promptText="To Location" visibleRowCount="8" />
+      <Label fx:id="testLabel1" layoutX="135.0" layoutY="230.0" prefHeight="18.0" prefWidth="135.0" text="Label" />
+      <Label fx:id="testLabel2" layoutX="348.0" layoutY="230.0" prefHeight="18.0" prefWidth="135.0" text="Label" />
+      <Button layoutX="62.0" layoutY="296.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="462.0" text="Search Flight" />
+      <DatePicker layoutX="570.0" layoutY="170.0" promptText="Departure Date" />
+   </children>
+</AnchorPane>

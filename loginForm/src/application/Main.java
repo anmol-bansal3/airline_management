@@ -14,7 +14,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			URL url = Paths.get("/home/karan/git/airline_management/loginForm/src/Login.fxml").toUri().toURL();
+			URL url = Paths.get("../airline_management/loginForm/src/Front.fxml").toUri().toURL();
 			Parent root = FXMLLoader.load(url);
 			Scene scene = new Scene(root,400,400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
