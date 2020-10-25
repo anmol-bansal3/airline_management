@@ -28,6 +28,7 @@
       <Label fx:id="testLabel1" layoutX="135.0" layoutY="230.0" prefHeight="18.0" prefWidth="135.0" text="Label" />
       <Label fx:id="testLabel2" layoutX="348.0" layoutY="230.0" prefHeight="18.0" prefWidth="135.0" text="Label" />
       <Button layoutX="62.0" layoutY="296.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="462.0" text="Search Flight" />
-      <DatePicker layoutX="570.0" layoutY="170.0" promptText="Departure Date" />
+      <DatePicker fx:id="dp" layoutX="570.0" layoutY="170.0" onAction="#showDate" promptText="Departure Date" showWeekNumbers="true" />
+      <Label fx:id="testLabel3" layoutX="593.0" layoutY="229.0" prefHeight="18.0" prefWidth="83.0" text="Label" />
    </children>
 </AnchorPane>

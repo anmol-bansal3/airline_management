@@ -2,9 +2,11 @@ package application;
 
 import java.net.URL;
 import java.nio.file.Paths;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
-import javafx.collections.ObservableList;
+
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,13 +14,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class MainController implements Initializable{
 	@FXML
-	public Label testLabel1,testLabel2;
+	public Label testLabel1,testLabel2,testLabel3;
 	@FXML
 	private Label lblStatus;
 	@FXML
@@ -32,6 +35,8 @@ public class MainController implements Initializable{
 	@FXML
 	public ComboBox<String> toLocation;
 	ObservableList<String> toList = FXCollections.observableArrayList("Banaglore","Pune","Kolkata");
+	@FXML
+	private DatePicker dp;
 	public void Login(ActionEvent event) throws Exception
 	{
 		if(txtUserName.getText().equals("user") && txtPassword.getText().equals("pass") )
@@ -64,5 +69,9 @@ public class MainController implements Initializable{
 	{
 		testLabel2.setText(toLocation.getValue());
 	}
-	
+	public void showDate(ActionEvent event)
+	{
+		LocalDate ld = dp.getValue();
+		testLabel3.setText(ld.toString());	
+	}
 }
