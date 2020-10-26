@@ -14,7 +14,7 @@ public class UserScreenController {
 	@FXML
 	void openFront(ActionEvent event) throws Exception
 	{
-		URL url = Paths.get("C:/Users/Snehil Sharma/git/airline_management/loginForm/src/Front.fxml").toUri().toURL();
+		URL url = Paths.get("../airline_management/loginForm/src/Front.fxml").toUri().toURL();
 		AnchorPane pane = FXMLLoader.load(url);
 		userScreenRootPane.getChildren().setAll(pane);
 	}

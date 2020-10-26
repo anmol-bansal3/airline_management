@@ -56,7 +56,7 @@ public class MainController implements Initializable{
 	@FXML
 	public void loadLogin(ActionEvent event) throws Exception
 	{
-		URL url = Paths.get("C:/Users/Snehil Sharma/git/airline_management/loginForm/src/Login.fxml").toUri().toURL();
+		URL url = Paths.get("../airline_management/loginForm/src/Login.fxml").toUri().toURL();
 		AnchorPane pane = FXMLLoader.load(url);
 		rootPane.getChildren().setAll(pane);
 		
