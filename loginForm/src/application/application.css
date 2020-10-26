@@ -3,6 +3,6 @@
 	-fx-background-color: blue;
 	-fx-color: white;
 }
-#home,#checkIn,#flightStatus,#modify,#support,#login{
+#home,#checkIn,#flightStatus,#modify,#support{
 	-fx-font-size : 22px;
 }

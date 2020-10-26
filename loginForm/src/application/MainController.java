@@ -17,17 +17,14 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
+import javafx.scene.Node;
 public class MainController implements Initializable{
 	@FXML
+	public AnchorPane rootPane;
+	@FXML
 	public Label testLabel1,testLabel2,testLabel3;
-	@FXML
-	private Label lblStatus;
-	@FXML
-	private TextField txtUserName;
-	@FXML
-	private TextField txtPassword;
 	@FXML
 	public ComboBox<String> fromLocation;
 	ObservableList<String> fromList = FXCollections.observableArrayList("Mohali","Delhi","Mumbai");
@@ -37,24 +34,6 @@ public class MainController implements Initializable{
 	ObservableList<String> toList = FXCollections.observableArrayList("Banaglore","Pune","Kolkata");
 	@FXML
 	private DatePicker dp;
-	public void Login(ActionEvent event) throws Exception
-	{
-		if(txtUserName.getText().equals("user") && txtPassword.getText().equals("pass") )
-		{
-			lblStatus.setText("Login Success!!!");
-			
-			//Showing 2nd Scene after Login is Successful
-			Stage primaryStage = new Stage();
-			URL url = Paths.get("../airline_management/loginForm/src/Main.fxml").toUri().toURL();
-			Parent root = FXMLLoader.load(url);
-			Scene scene = new Scene(root,400,400);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		}
-		else lblStatus.setText("Login Failed (: ");
-			
-	}
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		fromLocation.setItems(fromList);
@@ -74,4 +53,14 @@ public class MainController implements Initializable{
 		LocalDate ld = dp.getValue();
 		testLabel3.setText(ld.toString());	
 	}
+	@FXML
+	public void loadLogin(ActionEvent event) throws Exception
+	{
+		URL url = Paths.get("C:/Users/Snehil Sharma/git/airline_management/loginForm/src/Login.fxml").toUri().toURL();
+		AnchorPane pane = FXMLLoader.load(url);
+		rootPane.getChildren().setAll(pane);
+		
+	}
+	
+	
 }
