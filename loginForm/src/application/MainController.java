@@ -38,7 +38,6 @@ public class MainController implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 		fromLocation.setItems(fromList);
 		toLocation.setItems(toList);
-		
 	}
 	public void fromLocationChanged(ActionEvent event)
 	{

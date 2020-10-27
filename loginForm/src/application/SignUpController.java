@@ -1,5 +1,4 @@
 package application;
-
 import java.net.URL;
 import java.nio.file.Paths;
 import java.sql.Connection;
@@ -16,9 +15,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class LoginController {
+
+public class SignUpController {
 	@FXML 
-	AnchorPane loginRootPane;
+	AnchorPane signupRootPane;
 	@FXML
 	private Label lblStatus;
 	@FXML
@@ -26,28 +26,26 @@ public class LoginController {
 	@FXML
 	private TextField txtPassword;
 	@FXML
-	public void Login(ActionEvent event) throws Exception
+	private TextField phoneno;
+	@FXML
+	private TextField email;
+	
+	public void Signup(ActionEvent event) throws Exception
 	{
 		Connection con = jdbc.getConnection();
-		String query = "select * from Users";
 		Statement st = con.createStatement();
-		ResultSet rs = st.executeQuery(query);
-		while(rs.next())
-		if(txtUserName.getText().equals(rs.getString("username")) && txtPassword.getText().equals(rs.getString("password")) )
-		{
-			lblStatus.setText("Login Success!!!");
-			
-			//Showing 2nd Scene after Login is Successful
+		java.util.Date date = new java.util.Date();
+		java.sql.Date sqlDate = new java.sql.Date(date.getTime());
+		
+		String record = "INSERT INTO Users(username, password, phoneno, email, lastlogin, enabled)" + "VALUES (" + txtUserName.getText() + "," + txtPassword.getText() + "," + phoneno.getText() + "," + email.getText() + "," + sqlDate + "," + "1)";
+		if(st.executeUpdate(record) == 1) {
+			lblStatus.setText("Account Successfully created");
 			URL url = Paths.get("../airline_management/loginForm/src/UserScreen.fxml").toUri().toURL();
 			AnchorPane pane = FXMLLoader.load(url);
-			loginRootPane.getChildren().setAll(pane);
-			System.out.println("Reached here Successfully");
+			signupRootPane.getChildren().setAll(pane);
 		}
-		else lblStatus.setText("Login Failed (: ");		
-	}
-	public void signup(ActionEvent event) throws Exception
-	{
-		URL url = Paths.get("../airline_management/loginForm/src/Signup.fxml").toUri().toURL();
-		AnchorPane pane = FXMLLoader.load(url);
+		else {
+			lblStatus.setText("Account Not Created (: ");
+		}
 	}
 }
