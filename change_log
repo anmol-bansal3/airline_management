@@ -1,0 +1,1 @@
+CREATE TABLE `Airline`.`Users` ( `id` INT NOT NULL , `username` VARCHAR(64) NOT NULL , `password` VARCHAR(128) NOT NULL , `phoneno` VARCHAR(11) NOT NULL , `email` VARCHAR(50) NOT NULL , `lastlogin` TIMESTAMP NOT NULL , `enabled` TINYINT NOT NULL ) ENGINE = InnoDB;
