@@ -34,10 +34,12 @@ public class SignUpController {
 	{
 		Connection con = jdbc.getConnection();
 		Statement st = con.createStatement();
-		java.util.Date date = new java.util.Date();
-		java.sql.Date sqlDate = new java.sql.Date(date.getTime());
+//		java.util.Date date = new java.util.Date();
+//		java.sql.Date sqlDate = new java.sql.Date(date.getTime());
+//		java.sql.Timestamp sqlTime = new java.sql.Timestamp(date.getTime());
+//		System.out.print(txtUserName.getText() + "," + txtPassword.getText() + "," + phoneno.getText() + "," + email.getText());
 		
-		String record = "INSERT INTO Users(username, password, phoneno, email, lastlogin, enabled)" + "VALUES (" + txtUserName.getText() + "," + txtPassword.getText() + "," + phoneno.getText() + "," + email.getText() + "," + sqlDate + "," + "1)";
+		String record = "INSERT INTO Users(username, password, phoneno, email, enabled)" + "VALUES (" + txtUserName.getText() + "," + txtPassword.getText() + "," + phoneno.getText() + "," + email.getText() + "," + "1)";
 		if(st.executeUpdate(record) == 1) {
 			lblStatus.setText("Account Successfully created");
 			URL url = Paths.get("../airline_management/loginForm/src/UserScreen.fxml").toUri().toURL();
