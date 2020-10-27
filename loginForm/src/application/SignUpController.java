@@ -15,7 +15,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-
 public class SignUpController {
 	@FXML 
 	AnchorPane signupRootPane;
@@ -39,10 +38,10 @@ public class SignUpController {
 //		java.sql.Timestamp sqlTime = new java.sql.Timestamp(date.getTime());
 //		System.out.print(txtUserName.getText() + "," + txtPassword.getText() + "," + phoneno.getText() + "," + email.getText());
 		
-		String record = "INSERT INTO Users(username, password, phoneno, email, enabled)" + "VALUES (" + txtUserName.getText() + "," + txtPassword.getText() + "," + phoneno.getText() + "," + email.getText() + "," + "1)";
+		String record = "INSERT INTO Users(username, password, phoneno, email, enabled)" + "VALUES ('"+txtUserName.getText()+"','"+txtPassword.getText()+"','"+phoneno.getText()+"','"+email.getText()+"','1')";
 		if(st.executeUpdate(record) == 1) {
 			lblStatus.setText("Account Successfully created");
-			URL url = Paths.get("../airline_management/loginForm/src/UserScreen.fxml").toUri().toURL();
+			URL url = Paths.get("../airline_management/loginForm/src/Login.fxml").toUri().toURL();
 			AnchorPane pane = FXMLLoader.load(url);
 			signupRootPane.getChildren().setAll(pane);
 		}
