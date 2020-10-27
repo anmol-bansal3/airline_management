@@ -1,8 +1,8 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 #topBar{
-	-fx-background-color: blue;
-	-fx-color: white;
+	-fx-background-color: #1C77C3;
+	-fx-color: #FFFFFF;
 }
 #home,#checkIn,#flightStatus,#modify,#support{
-	-fx-font-size : 22px;
+	-fx-font-size : 16px;
 }

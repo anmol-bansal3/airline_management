@@ -8,26 +8,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <Label fx:id="topBar" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" prefHeight="69.0" prefWidth="1000.0" text="Welcome to Air Ticket Booking!" textAlignment="RIGHT" textFill="#da2d16">
+      <Label fx:id="topBar" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" prefHeight="62.0" prefWidth="1000.0" text="Welcome to Air Ticket Booking!" textAlignment="RIGHT" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="home" alignment="CENTER" layoutX="47.0" layoutY="75.0" prefHeight="50.0" prefWidth="100.0" text="HOME" textAlignment="CENTER" />
-      <Label fx:id="checkIn" alignment="CENTER" layoutX="176.0" layoutY="75.0" prefHeight="50.0" prefWidth="100.0" text="CHECK IN" />
-      <Label fx:id="flightStatus" layoutX="313.0" layoutY="75.0" prefHeight="50.0" prefWidth="171.0" text="FLIGHT STATUS" />
-      <Label fx:id="modify" layoutX="519.0" layoutY="75.0" prefHeight="50.0" prefWidth="100.0" text="MODIFY" />
-      <Label fx:id="support" layoutX="660.0" layoutY="75.0" prefHeight="50.0" prefWidth="100.0" text="SUPPORT" />
       <Separator layoutX="-1.0" layoutY="120.0" prefHeight="10.0" prefWidth="1000.0" />
-      <ComboBox fx:id="fromLocation" layoutX="65.0" layoutY="168.0" onAction="#fromLocationChanged" prefHeight="25.0" prefWidth="205.0" promptText="From Location" />
-      <ComboBox fx:id="toLocation" layoutX="313.0" layoutY="168.0" onAction="#toLocationChanged" prefHeight="25.0" prefWidth="205.0" promptText="To Location" visibleRowCount="8" />
-      <Label fx:id="testLabel1" layoutX="135.0" layoutY="230.0" prefHeight="18.0" prefWidth="135.0" text="Label" />
-      <Label fx:id="testLabel2" layoutX="348.0" layoutY="230.0" prefHeight="18.0" prefWidth="135.0" text="Label" />
-      <Button layoutX="62.0" layoutY="296.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="462.0" text="Search Flight" />
-      <DatePicker fx:id="dp" layoutX="570.0" layoutY="170.0" onAction="#showDate" promptText="Departure Date" showWeekNumbers="true" />
-      <Label fx:id="testLabel3" layoutX="593.0" layoutY="229.0" prefHeight="18.0" prefWidth="83.0" text="Label" />
-      <Button layoutX="800.0" layoutY="84.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="73.0" text="Log-In" />
+      <ComboBox fx:id="fromLocation" layoutX="168.0" layoutY="155.0" onAction="#fromLocationChanged" prefHeight="25.0" prefWidth="205.0" promptText="From Location" />
+      <ComboBox fx:id="toLocation" layoutX="441.0" layoutY="155.0" onAction="#toLocationChanged" prefHeight="25.0" prefWidth="205.0" promptText="To Location" visibleRowCount="8" />
+      <Label fx:id="testLabel1" layoutX="246.0" layoutY="212.0" prefHeight="18.0" prefWidth="135.0" text="Label" />
+      <Label fx:id="testLabel2" layoutX="459.0" layoutY="212.0" prefHeight="18.0" prefWidth="135.0" text="Label" />
+      <Button layoutX="252.0" layoutY="294.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="462.0" text="Search Flight" />
+      <DatePicker fx:id="dp" layoutX="696.0" layoutY="155.0" onAction="#showDate" promptText="Departure Date" showWeekNumbers="true" />
+      <Label fx:id="testLabel3" layoutX="646.0" layoutY="212.0" prefHeight="18.0" prefWidth="111.0" text="Label" />
+      <Button layoutX="864.0" layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="Log-In" />
+      <Button layoutX="702.0" layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="SUPPORT" />
+      <Button layoutX="179.0" layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="MODIFY" />
+      <Button layoutX="348.0" layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="STATUS" />
+      <Button layoutX="527.0" layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="CHECK IN" />
+      <Button layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="HOME" />
    </children>
 </AnchorPane>

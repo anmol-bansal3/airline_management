@@ -16,7 +16,7 @@ public class Main extends Application {
 		try {
 			URL url = Paths.get("../airline_management/loginForm/src/Front.fxml").toUri().toURL();
 			Parent root = FXMLLoader.load(url);
-			Scene scene = new Scene(root,910,400);
+			Scene scene = new Scene(root,990,400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();

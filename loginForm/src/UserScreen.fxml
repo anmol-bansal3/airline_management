@@ -5,13 +5,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="userScreenRootPane" prefHeight="400.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserScreenController">
+<AnchorPane fx:id="userScreenRootPane" prefHeight="400.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserScreenController">
    <children>
-      <Label layoutX="16.0" layoutY="104.0" prefHeight="46.0" prefWidth="282.0" text="Welcome to AirTicket Booking" textFill="#222b9e">
+      <Label alignment="CENTER" layoutY="104.0" prefHeight="46.0" prefWidth="990.0" text="Welcome to AirTicket Booking" textFill="#3541c3">
          <font>
-            <Font name="System Bold Italic" size="18.0" />
+            <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <Button layoutX="77.0" layoutY="175.0" mnemonicParsing="false" onAction="#openFront" text="Go To Main Screen" />
+      <Button layoutX="425.0" layoutY="200.0" mnemonicParsing="false" onAction="#openFront" text="Go To Main Screen" />
    </children>
 </AnchorPane>
