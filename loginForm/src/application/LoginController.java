@@ -38,7 +38,7 @@ public class LoginController {
 			lblStatus.setText("Login Success!!!");
 			
 			//Showing 2nd Scene after Login is Successful
-			URL url = Paths.get("../loginForm/src/UserScreen.fxml").toUri().toURL();
+			URL url = Paths.get("../airline_management/loginForm/src/UserScreen.fxml").toUri().toURL();
 			AnchorPane pane = FXMLLoader.load(url);
 			loginRootPane.getChildren().setAll(pane);
 			System.out.println("Reached here Successfully");
