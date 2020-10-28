@@ -49,5 +49,6 @@ public class LoginController {
 	{
 		URL url = Paths.get("../airline_management/loginForm/src/Signup.fxml").toUri().toURL();
 		AnchorPane pane = FXMLLoader.load(url);
+		loginRootPane.getChildren().setAll(pane);
 	}
 }
