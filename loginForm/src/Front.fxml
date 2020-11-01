@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="1077.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
       <Label fx:id="topBar" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" prefHeight="62.0" prefWidth="1000.0" text="Welcome to Air Ticket Booking!" textAlignment="RIGHT" textFill="WHITE">
          <font>
@@ -16,18 +17,21 @@
          </font>
       </Label>
       <Separator layoutX="-1.0" layoutY="120.0" prefHeight="10.0" prefWidth="1000.0" />
-      <ComboBox fx:id="fromLocation" layoutX="168.0" layoutY="155.0" onAction="#fromLocationChanged" prefHeight="25.0" prefWidth="205.0" promptText="From Location" />
-      <ComboBox fx:id="toLocation" layoutX="441.0" layoutY="155.0" onAction="#toLocationChanged" prefHeight="25.0" prefWidth="205.0" promptText="To Location" visibleRowCount="8" />
-      <Label fx:id="testLabel1" layoutX="246.0" layoutY="212.0" prefHeight="18.0" prefWidth="135.0" text="Label" />
-      <Label fx:id="testLabel2" layoutX="459.0" layoutY="212.0" prefHeight="18.0" prefWidth="135.0" text="Label" />
+      <ComboBox fx:id="fromLocation" layoutX="27.0" layoutY="155.0" onAction="#fromLocationChanged" prefHeight="26.0" prefWidth="189.0" promptText="From Location" />
+      <ComboBox fx:id="toLocation" layoutX="252.0" layoutY="155.0" onAction="#toLocationChanged" prefHeight="25.0" prefWidth="205.0" promptText="To Location" visibleRowCount="8" />
+      <Label fx:id="testLabel1" layoutX="27.0" layoutY="221.0" prefHeight="18.0" prefWidth="135.0" text="Label" />
+      <Label fx:id="testLabel2" layoutX="252.0" layoutY="221.0" prefHeight="18.0" prefWidth="135.0" text="Label" />
       <Button layoutX="252.0" layoutY="294.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="462.0" text="Search Flight" />
-      <DatePicker fx:id="dp" layoutX="696.0" layoutY="155.0" onAction="#showDate" promptText="Departure Date" showWeekNumbers="true" />
-      <Label fx:id="testLabel3" layoutX="646.0" layoutY="212.0" prefHeight="18.0" prefWidth="111.0" text="Label" />
+      <DatePicker fx:id="dp1" layoutX="496.0" layoutY="155.0" onAction="#DepartureDate" promptText="Departure Date" showWeekNumbers="true" />
+      <Label fx:id="testLabel3" layoutX="499.0" layoutY="230.0" prefHeight="18.0" prefWidth="111.0" text="Label" />
       <Button layoutX="864.0" layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="Log-In" />
       <Button layoutX="702.0" layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="SUPPORT" />
       <Button layoutX="179.0" layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="MODIFY" />
       <Button layoutX="348.0" layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="STATUS" />
       <Button layoutX="527.0" layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="CHECK IN" />
       <Button layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="HOME" />
+      <DatePicker fx:id="dp2" layoutX="738.0" layoutY="155.0" onAction="#ReturnDate" promptText="Return Date" showWeekNumbers="true" />
+      <Label fx:id="testLabel4" layoutX="738.0" layoutY="230.0" prefHeight="18.0" prefWidth="111.0" text="Label" />
+      <CheckBox fx:id="check1" layoutX="27.0" layoutY="191.0" mnemonicParsing="false" onAction="#check1" onMouseClicked="#one_way" text="One Way" />
    </children>
 </AnchorPane>
