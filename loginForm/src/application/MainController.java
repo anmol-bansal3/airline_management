@@ -66,7 +66,9 @@ public class MainController implements Initializable{
 		AnchorPane pane = FXMLLoader.load(url);
 		rootPane.getChildren().setAll(pane);
 	}
-	public void one_way(MouseEvent event) throws Exception{
-		
-	}
+//	public void one_way(ActionEvent event) throws Exception{
+//		if(check1.isSelected()) {
+//			
+//		}
+//	}
 }

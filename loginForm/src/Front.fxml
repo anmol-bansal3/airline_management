@@ -32,6 +32,6 @@
       <Button layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="HOME" />
       <DatePicker fx:id="dp2" layoutX="738.0" layoutY="155.0" onAction="#ReturnDate" promptText="Return Date" showWeekNumbers="true" />
       <Label fx:id="testLabel4" layoutX="738.0" layoutY="230.0" prefHeight="18.0" prefWidth="111.0" text="Label" />
-      <CheckBox fx:id="check1" layoutX="27.0" layoutY="191.0" mnemonicParsing="false" onAction="#check1" onMouseClicked="#one_way" text="One Way" />
+      <CheckBox fx:id="check1" layoutX="27.0" layoutY="191.0" mnemonicParsing="false" text="One Way" />
    </children>
 </AnchorPane>
