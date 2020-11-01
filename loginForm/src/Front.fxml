@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="1077.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="1077.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
       <Label fx:id="topBar" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" prefHeight="62.0" prefWidth="1000.0" text="Welcome to Air Ticket Booking!" textAlignment="RIGHT" textFill="WHITE">
          <font>
@@ -32,6 +32,6 @@
       <Button layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="HOME" />
       <DatePicker fx:id="dp2" layoutX="738.0" layoutY="155.0" onAction="#ReturnDate" promptText="Return Date" showWeekNumbers="true" />
       <Label fx:id="testLabel4" layoutX="738.0" layoutY="230.0" prefHeight="18.0" prefWidth="111.0" text="Label" />
-      <CheckBox fx:id="check1" layoutX="27.0" layoutY="191.0" mnemonicParsing="false" text="One Way" />
+      <CheckBox fx:id="check1" layoutX="27.0" layoutY="191.0" mnemonicParsing="false" onAction="#oneWay" text="One Way" />
    </children>
 </AnchorPane>

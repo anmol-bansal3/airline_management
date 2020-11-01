@@ -36,7 +36,7 @@ public class MainController implements Initializable{
 	@FXML
 	private DatePicker dp2;
 	@FXML
-	public CheckBox check1; 
+	private CheckBox check1; 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		fromLocation.setItems(fromList);
@@ -66,9 +66,12 @@ public class MainController implements Initializable{
 		AnchorPane pane = FXMLLoader.load(url);
 		rootPane.getChildren().setAll(pane);
 	}
-//	public void one_way(ActionEvent event) throws Exception{
-//		if(check1.isSelected()) {
-//			
-//		}
-//	}
+	public void oneWay(ActionEvent event) throws Exception{
+		if(check1.isSelected()) {
+			rootPane.getChildren().remove(dp2);
+		}
+		else{
+			rootPane.getChildren().add(dp2);
+		}
+	}
 }
