@@ -1,3 +1,12 @@
 CREATE TABLE `Airline`.`Users` ( `id` INT NOT NULL , `username` VARCHAR(64) NOT NULL , `password` VARCHAR(128) NOT NULL , `phoneno` VARCHAR(11) NOT NULL , `email` VARCHAR(50) NOT NULL , `lastlogin` TIMESTAMP NOT NULL , `enabled` TINYINT NOT NULL ) ENGINE = InnoDB;
 ALTER TABLE `Users` ADD PRIMARY KEY( `id`);
 ALTER TABLE `Users` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;
+CREATE TABLE `Airline`.`flightPath` ( `id` INT NOT NULL , `userId` INT NOT NULL , `flightNo` VARCHAR(20) NOT NULL , `fromPath` VARCHAR(50) NOT NULL , `toPath` VARCHAR(50) NOT NULL , `timeFrom` TIME NOT NULL , `timeTo` TIME NOT NULL ) ENGINE = InnoDB;
+ALTER TABLE `flightPath` DROP `userId`;
+CREATE TABLE `Airline`.`utofmapping` ( `id` INT NOT NULL , `userId` INT NOT NULL , `flightId` INT NOT NULL , `flightNo` VARCHAR(20) NOT NULL , `fromPath` VARCHAR(50) NOT NULL , `toPath` VARCHAR(50) NOT NULL , `timeFrom` TIME NOT NULL , `timeTo` TIME NOT NULL ) ENGINE = InnoDB;
+ALTER TABLE `flightPath` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `utofmapping` ADD PRIMARY KEY(`id`);
+ALTER TABLE `flightPath` ADD PRIMARY KEY(`id`);
+ALTER TABLE `utofmapping` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `utofmapping` ADD `departureDate` DATE NOT NULL AFTER `timeTo`, ADD `returnDate` DATE NOT NULL AFTER `departureDate`;
+ALTER TABLE `Users` ADD `passportNo` VARCHAR(50) NOT NULL AFTER `enabled`, ADD `DOB` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER `passportNo`;
