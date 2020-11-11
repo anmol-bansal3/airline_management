@@ -5,6 +5,8 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -24,14 +26,18 @@
       <Button layoutX="252.0" layoutY="294.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="462.0" text="Search Flight" />
       <DatePicker fx:id="dp1" layoutX="496.0" layoutY="155.0" onAction="#DepartureDate" promptText="Departure Date" showWeekNumbers="true" />
       <Label fx:id="testLabel3" layoutX="499.0" layoutY="230.0" prefHeight="18.0" prefWidth="111.0" text="Label" />
-      <Button layoutX="864.0" layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="Log-In" />
-      <Button layoutX="702.0" layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="SUPPORT" />
-      <Button layoutX="179.0" layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="MODIFY" />
-      <Button layoutX="348.0" layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="STATUS" />
-      <Button layoutX="527.0" layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="CHECK IN" />
-      <Button layoutY="77.0" mnemonicParsing="false" onAction="#loadLogin" prefHeight="32.0" prefWidth="135.0" text="HOME" />
       <DatePicker fx:id="dp2" layoutX="738.0" layoutY="155.0" onAction="#ReturnDate" promptText="Return Date" showWeekNumbers="true" />
       <Label fx:id="testLabel4" layoutX="738.0" layoutY="230.0" prefHeight="18.0" prefWidth="111.0" text="Label" />
       <CheckBox fx:id="check1" layoutX="27.0" layoutY="191.0" mnemonicParsing="false" onAction="#oneWay" text="One Way" />
+      <MenuBar layoutX="-12.0" layoutY="93.0" prefHeight="32.0" prefWidth="1090.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="Home" />
+          <Menu mnemonicParsing="false" text="Book Flight" />
+          <Menu mnemonicParsing="false" text="View Booking" />
+          <Menu mnemonicParsing="false" text="About Us" />
+            <Menu mnemonicParsing="false" text="Login" />
+            <Menu mnemonicParsing="false" text="Help" />
+        </menus>
+      </MenuBar>
    </children>
 </AnchorPane>
