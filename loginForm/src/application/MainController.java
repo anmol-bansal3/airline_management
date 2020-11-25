@@ -27,7 +27,20 @@ public class MainController implements Initializable{
 	@FXML
 	public ComboBox<String> fromLocation;
 	ObservableList<String> fromList = FXCollections.observableArrayList("Mohali","Delhi","Mumbai");
-	
+	@FXML
+	public TableView<Flight> flight_details;
+	@FXML
+	public TableColumn<Flight,Integer> flight_number;
+	@FXML
+	public TableColumn<Flight,Integer> cost;
+	@FXML
+	public TableColumn<Flight,String> source;
+	@FXML
+	public TableColumn<Flight,String> destination;
+	@FXML
+	public TableColumn<Flight,String> departure;
+	@FXML
+	public TableColumn<Flight,String> arrival;
 	@FXML
 	public ComboBox<String> toLocation;
 	ObservableList<String> toList = FXCollections.observableArrayList("Banaglore","Pune","Kolkata");
